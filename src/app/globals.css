@@ -1,27 +1,208 @@
+@import "tw-animate-css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  :root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+    color-scheme: dark;
+  }
+  .dark body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+  .dark [class~="bg-white"],
+  .dark [class~="bg-white/95"],
+  .dark [class~="bg-[#FAFAF9]"],
+  .dark [class~="bg-[#F1F5F9]"],
+  .dark [class~="bg-[#F8FAFC]"] {
+    background-color: #334155 !important;
+  }
+  .dark [class~="bg-[#F4F6F5]"] {
+    background-color: #1e293b !important;
+  }
+  .dark [class~="bg-[#E2E8F0]"] {
+    background-color: #475569 !important;
+  }
+  .dark [class~="bg-[#E0F2F1]"] {
+    background-color: #134e4a !important;
+  }
+  .dark [class~="bg-[#DBEAFE]"] {
+    background-color: #1e3a8a !important;
+  }
+  .dark [class~="bg-[#FCE7F3]"] {
+    background-color: #831843 !important;
+  }
+  .dark [class~="bg-[#EDE9FE]"] {
+    background-color: #4c1d95 !important;
+  }
+  .dark [class~="bg-red-100"] {
+    background-color: #450a0a !important;
+  }
+  .dark [class~="bg-green-100"] {
+    background-color: #052e16 !important;
+  }
+  .dark [class~="bg-[#FEF3C7]"],
+  .dark [class~="bg-yellow-100"] {
+    background-color: #422006 !important;
+  }
+  .dark [class~="bg-yellow-100"] {
+    color: #fde68a !important;
+  }
+  .dark [class~="bg-red-50"] {
+    background-color: #450a0a !important;
+  }
+  .dark [class~="text-red-900"] {
+    color: #fecaca !important;
+  }
+  .dark [class~="text-[#1E293B]"],
+  .dark [class*="text-[#1E293B]/"],
+  .dark [class~="text-[#334155]"],
+  .dark [class~="text-[#475569]"],
+  .dark [class~="text-[#64748B]"] {
+    color: #cbd5e1 !important;
+  }
+  .dark [class~="text-[#94A3B8]"] {
+    color: #94a3b8 !important;
+  }
+  .dark [class~="text-[#0F766E]"],
+  .dark [class~="text-[#0D9488]"] {
+    color: #5eead4 !important;
+  }
+  .dark [class~="text-[#8A4100]"],
+  .dark [class~="text-[#92400E]"],
+  .dark [class~="text-[#9A4B0A]"] {
+    color: #fdba74 !important;
+  }
+  .dark [class~="text-[#1D4ED8]"] {
+    color: #bfdbfe !important;
+  }
+  .dark [class~="text-[#BE185D]"] {
+    color: #fbcfe8 !important;
+  }
+  .dark [class~="text-[#6D28D9]"] {
+    color: #ddd6fe !important;
+  }
+  .dark [class~="text-red-800"] {
+    color: #fca5a5 !important;
+  }
+  .dark [class~="text-green-800"] {
+    color: #86efac !important;
+  }
+  .dark [class~="text-yellow-800"] {
+    color: #fcd34d !important;
+  }
+  .dark [class*="bg-[#FB923C]"][class*="text-[#1E293B]"] {
+    color: #1e293b !important;
+  }
+  .dark [class*="border-[#1E293B]"],
+  .dark [class*="divide-[#1E293B]"] {
+    border-color: rgb(226 232 240 / 14%) !important;
+  }
+  .dark [class~="ring-[#FAFAF9]"] {
+    --tw-ring-color: #0f172a !important;
+  }
+  .dark .recharts-cartesian-grid line {
+    stroke: #475569 !important;
+  }
+  .dark .recharts-cartesian-axis-tick text {
+    fill: #94a3b8 !important;
+  }
+  .dark .recharts-default-tooltip {
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+    color: #e2e8f0 !important;
+  }
+  * {
+    border-color: var(--border);
+    outline-color: var(--ring);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

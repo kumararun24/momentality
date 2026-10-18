@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Temporary Next.js build backups
+/.next-old/
+/.next-backup-2/
+/.next-build-error-20261018-132830/
+/.next-dev-error-20261018-133431/
